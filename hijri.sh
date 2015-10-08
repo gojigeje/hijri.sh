@@ -14,7 +14,7 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2013 Ghozy Arif Fajri <gojigeje@gmail.com>
 
-date=$(date +%d)
+date=$(date +%d | sed 's/^0*//')
 month=$(date +%m)
 year=$(date +%Y)
 
