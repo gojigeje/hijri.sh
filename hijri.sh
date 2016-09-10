@@ -2,7 +2,7 @@
 # ----------------------------------------------------------------------------------
 # @name    : hijri.sh
 # @version : 0.2
-# @date    : 10/09/16 08:36:54 
+# @date    : 10/09/16 08:36:54
 #
 # ABOUT
 # ----------------------------------------------------------------------------------
@@ -12,10 +12,10 @@
 # LICENSE
 # ----------------------------------------------------------------------------------
 #  The MIT License (MIT)
-#  Copyright (c) 2013 Ghozy Arif Fajri <gojigeje@gmail.com>
+#  Copyright (c) 2016 Ghozy Arif Fajri <gojigeje@gmail.com>
 
 # date adjustment, use positive number to add days, negative number to substract, '0' for none.
-adjust=2
+adjust=1
 
 date=$(date +%d -d "$adjust day" | sed 's/^0*//')
 month=$(date +%m | sed 's/^0*//')
