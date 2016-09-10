@@ -1,8 +1,8 @@
 #!/bin/bash
 # ----------------------------------------------------------------------------------
 # @name    : hijri.sh
-# @version : 0.1
-# @date    : 01/15/2014 08:25:46 AM
+# @version : 0.2
+# @date    : 10/09/16 08:36:54 
 #
 # ABOUT
 # ----------------------------------------------------------------------------------
@@ -14,8 +14,11 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2013 Ghozy Arif Fajri <gojigeje@gmail.com>
 
-date=$(date +%d | sed 's/^0*//')
-month=$(date +%m)
+# date adjustment, use positive number to add days, negative number to substract, '0' for none.
+adjust=2
+
+date=$(date +%d -d "$adjust day" | sed 's/^0*//')
+month=$(date +%m | sed 's/^0*//')
 year=$(date +%Y)
 
 array_bulan=( "Muharram" "Safar" "Rabiul Awwal" "Rabiul Akhir" "Jumadil Awwal" "Jumadil Akhir" "Rajab" "Sya’ban" "Ramadhan" "Syawwal" "Zulqaidah" "Zulhijjah" )
